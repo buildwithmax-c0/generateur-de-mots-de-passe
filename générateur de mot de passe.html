@@ -1,0 +1,67 @@
+html_code = """
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mot de Passe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #5a5a5a;
+        }
+        input[type="number"] {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .resultat {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7e7e7;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Générateur de Mot de Passe</h1>
+<p>Entrez la longueur souhaitée pour votre mot de passe :</p>
+
+<input type="number" id="longueur" placeholder="Longueur" min="1" max="50">
+<button onclick="genererMotDePasse()">Générer Mot de Passe</button>
+
+<div class="resultat" id="motDePasse"></div>
+
+<script>
+    function genererMotDePasse() {
+        const longueur = document.getElementById('longueur').value || 12;
+        const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?/";
+        let motDePasse = "";
+
+        for (let i = 0; i < longueur; i++) {
+            motDePasse += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+        }
+
+        document.getElementById('motDePasse').textContent = "Votre mot de passe généré est : " + motDePasse;
+    }
+</script>
+
+</body>
+</html>
+"""
