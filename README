@@ -1,0 +1,19 @@
+# Générateur de mots de passe
+
+Un générateur de mots de passe sécurisé développé en **HTML**, **CSS** et **JavaScript**.  
+Permet de créer des mots de passe forts, aléatoires et personnalisables selon la longueur et les critères souhaités.
+
+## Installation
+
+Ouvre le fichier  dans ton navigateur (Microsoft Edge recommandé).
+
+## Usage
+
+- Choisis la longueur du mot de passe  
+- Sélectionne les options (majuscules, minuscules, chiffres, symboles)  
+- Clique sur le bouton pour générer un mot de passe sécurisé  
+- Copie le mot de passe pour l’utiliser où tu veux
+
+## Licence
+
+Ce projet est sous licence MIT — voir le fichier LICENSE pour plus d’infos.
